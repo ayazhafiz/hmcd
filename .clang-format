@@ -1,0 +1,5 @@
+---
+BasedOnStyle: webkit
+ColumnLimit: 100
+---
+Language: Cpp
