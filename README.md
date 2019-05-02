@@ -21,6 +21,6 @@ These config files specify a particular workflow on a macOS machine. Configurati
 
 ### Screens
 
-![neovim start screen](https://i.ibb.co/DMGXbBW/Screen-Shot-2019-05-01-at-6-26-39-PM.png)
+![neovim start screen](https://gist.github.com/ayazhafiz/33c7f7592443b09c00b1699f21b4d9fb/raw/0ab8d430fd2b13cc4709e7e4624d08e7e696b216/neovim_start.png)
 
-![tmux, vim, chunkwm](https://i.ibb.co/hmx9mgz/Screen-Shot-2019-05-01-at-7-24-18-PM.png)
+![tmux, vim, chunkwm](https://gist.github.com/ayazhafiz/33c7f7592443b09c00b1699f21b4d9fb/raw/0ab8d430fd2b13cc4709e7e4624d08e7e696b216/vim_tmux_chunkwm.png)
