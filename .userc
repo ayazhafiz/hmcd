@@ -9,7 +9,7 @@ export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 # Aliases
 alias alacritty='/Applications/Alacritty.app/Contents/MacOS/alacritty'
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.hmcd/ --work-tree=$HOME'
 alias vim="nvim"
 alias lldb="PATH=/usr/bin:$PATH lldb" # source MacOS python
 alias python="python3"
