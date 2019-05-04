@@ -2,7 +2,7 @@
 #                     be found at https://github.com/koekeishiya/skhd/issues/1
 
 # open terminal
-cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
+cmd - return : chunkc tiling::desktop --focus 1; Applications/Alacritty.app/Contents/MacOS/alacritty
 
 # open Safari
 cmd + shift - return : open -a Safari

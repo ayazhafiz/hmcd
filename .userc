@@ -1,20 +1,21 @@
 ### Data
 
 # ENV
+export PATH="$PATH:/usr/bin:$GOPATH/bin:$HOME/.rvm/bin:$HOME/.cargo/bin"
+export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/opt/openssl/lib/"
 export GOPATH="$HOME/gocode"
 export GOROOT="/usr/local/Cellar/go/1.12.4/libexec/"
-export PATH="$PATH:/usr/bin:$GOPATH/bin:$HOME/.rvm/bin:$HOME/.cargo/bin"
 export EDITOR="nvim"
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 # Aliases
+alias hmcd='/usr/bin/git --git-dir=$HOME/.hmcd/ --work-tree=$HOME'
 alias alacritty='/Applications/Alacritty.app/Contents/MacOS/alacritty'
-alias config='/usr/bin/git --git-dir=$HOME/.hmcd/ --work-tree=$HOME'
 alias vim="nvim"
 alias lldb="PATH=/usr/bin:$PATH lldb" # source MacOS python
 alias python="python3"
 alias pip="pip3"
-alias xs="exa -lhga"
+alias xs="exa -lhga --git"
 
 V() { cd ~/Desktop/Vanderbilt/$1 }
 ranger() {
@@ -37,6 +38,3 @@ PURE_GIT_PULL=1
 # Pure Power (Powerlevel10k)
 POWERLEVEL9K_IGNORE_TERM_COLORS=true
 source ~/.purepower
-
-# Syntax Highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -20,6 +20,7 @@ inoremap {;<CR> {<CR>};<ESC>O
 
 " Remap escape
 inoremap kj <ESC>
+tnoremap kj <C-\><C-n>
 
 let g:ycm_always_populate_location_list = 1
 let g:ycm_confirm_extra_conf = 0
