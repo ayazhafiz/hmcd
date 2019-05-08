@@ -36,7 +36,7 @@ brew "libevent"
 # YAML Parser
 brew "libyaml"
 # Next-gen compiler infrastructure
-brew "llvm"
+brew "llvm@6"
 # Manage compile and link flags for libraries
 brew "pkg-config"
 # Fast and statically typed, compiled language with Ruby-like syntax
@@ -81,6 +81,10 @@ brew "numpy", link: false
 brew "nvm"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
+# Wrapper around libsass that helps to create command-line apps
+brew "sassc"
+# Generate ASCII art with terminal, shell, and OS info
+brew "screenfetch"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # ISO/Edinburgh-style Prolog interpreter

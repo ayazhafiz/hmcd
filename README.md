@@ -6,21 +6,28 @@ This dotfile repo employs the dotfile management method [described here](https:/
 
 ### Overview 
 
+> For a detailed writeup of `hmcd`, see [this blog post](https://cc.ayazhafiz.com/articles/19/tiling-wm-macos).
+
 These config files specify a particular workflow on a macOS machine. Configurations for the following programs and softwares are included:
 
 - [chunkwm](https://github.com/koekeishiya/chunkwm)/[skhd](https://github.com/koekeishiya/skhd)
-- [alacritty](https://www.github.com/jwilm/alacritty)
-- tmux
-- vim
-- zsh
-- git
-- clang
-- cargo, rustup
-- homebrew packages
-- [ ] ubersicht
+- [alacritty](https://github.com/jwilm/alacritty)
+- [tmux](https://github.com/tmux/tmux)
+- [(neo)vim](https://github.com/neovim/neovim)
+- [zsh](https://www.zsh.org)
+- [git](https://git-scm.com)
+- [clang](https://clang.llvm.org)
+- [cargo](https://github.com/rust-lang/cargo), [rustup](https://rustup.rs)
+- [homebrew](https://brew.sh)
 
 ### Screens
 
-![neovim start screen](https://gist.github.com/ayazhafiz/33c7f7592443b09c00b1699f21b4d9fb/raw/0ab8d430fd2b13cc4709e7e4624d08e7e696b216/neovim_start.png)
+![neovim start screen](https://cc.ayazhafiz.com/assets/img/neovim_start.jpg)
 
-![tmux, vim, chunkwm](https://gist.github.com/ayazhafiz/33c7f7592443b09c00b1699f21b4d9fb/raw/0ab8d430fd2b13cc4709e7e4624d08e7e696b216/vim_tmux_chunkwm.png)
+![tmux, vim, chunkwm](https://cc.ayazhafiz.com/assets/img/vim_tmux_chunkwm.jpg)
+
+![ranger in tmux, qutebrowser](https://cc.ayazhafiz.com/assets/img/ranger_qutebrowser.jpg)
+
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/KcWJJoPBy7qBLcnEIh" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/hXCJTb7v00wjLcJb9I" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>

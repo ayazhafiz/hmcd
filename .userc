@@ -7,6 +7,7 @@ export GOPATH="$HOME/gocode"
 export GOROOT="/usr/local/Cellar/go/1.12.4/libexec/"
 export EDITOR="nvim"
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+export GPG_TTY=$(tty)
 
 # Aliases
 alias hmcd='/usr/bin/git --git-dir=$HOME/.hmcd/ --work-tree=$HOME'
