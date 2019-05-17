@@ -27,7 +27,3 @@ These config files specify a particular workflow on a macOS machine. Configurati
 ![tmux, vim, chunkwm](https://cc.ayazhafiz.com/assets/img/vim_tmux_chunkwm.jpg)
 
 ![ranger in tmux, qutebrowser](https://cc.ayazhafiz.com/assets/img/ranger_qutebrowser.jpg)
-
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/KcWJJoPBy7qBLcnEIh" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
-
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/hXCJTb7v00wjLcJb9I" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
