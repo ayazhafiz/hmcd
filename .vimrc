@@ -63,7 +63,7 @@ let g:syntastic_mode_map = {
             \ }
 
 " Neoformat
-autocmd BufWritePre *.c,*.cpp,*.h,*.hpp,*.rs Neoformat
+autocmd BufWritePre *.c,*.cc,*.cpp,*.h,*.hh,*.hpp,*.rs Neoformat
 autocmd BufWritePre *.js,*.ts,*.ex,*.rb,*.cr,*.py Neoformat
 autocmd BufWritePre *.json,*.graphql,*.yaml,*.html Neoformat
 autocmd BufWritePre *.css,*.scss Neoformat prettier

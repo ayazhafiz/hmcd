@@ -1,21 +1,47 @@
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/hafiz/.oh-my-zsh"
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-completions zsh-syntax-highlighting alias-tips)
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
-autoload -U compinit && compinit
-
+# Env
+export PATH="$PATH:/usr/bin:$GOPATH/bin:$HOME/.rvm/bin:$HOME/.cargo/bin"
+export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/opt/openssl/lib/"
+export GOPATH="$HOME/gocode"
+export GOROOT="/usr/local/Cellar/go/1.12.4/libexec/"
+export EDITOR="nvim"
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+export GPG_TTY=$(tty)
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
-source $ZSH/oh-my-zsh.sh
+# Aliases
+alias hmcd='/usr/bin/git --git-dir=$HOME/.hmcd/ --work-tree=$HOME'
+alias alacritty='/Applications/Alacritty.app/Contents/MacOS/alacritty'
+alias vim="nvim"
+alias lldb="PATH=/usr/bin:$PATH lldb" # source MacOS python
+alias python="python3"
+alias pip="pip3"
+alias xs="exa -lhga --git"
 
-# User configuration
-source ~/.userc
+# Functions
+V() { cd ~/Documents/Vanderbilt/$1 }
+ranger() {
+    if [ -z "$RANGER_LEVEL" ]; then
+	/usr/local/bin/ranger "$@"
+    else
+        exit
+    fi
+}
+
+# Plugins
+plugins=(git zsh-autosuggestions zsh-completions zsh-syntax-highlighting alias-tips)
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+autoload -U compinit; compinit
+
+# Theme and Prompt
+ZSH_THEME="powerlevel10k/powerlevel10k"
+POWERLEVEL9K_IGNORE_TERM_COLORS=true
+
+autoload -U promptinit; promptinit
+PURE_GIT_PULL=1
+source "$HOME/.purepower"
+
+# Load ZSH
+export ZSH="$HOME/.oh-my-zsh"
+source "$ZSH/oh-my-zsh.sh"
