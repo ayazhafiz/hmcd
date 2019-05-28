@@ -1,8 +1,8 @@
 # Env
-export PATH="$PATH:/usr/bin:$GOPATH/bin:$HOME/.rvm/bin:$HOME/.cargo/bin"
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/opt/openssl/lib/"
 export GOPATH="$HOME/gocode"
 export GOROOT="/usr/local/Cellar/go/1.12.4/libexec/"
+export PATH="$PATH:/usr/bin:$GOPATH/bin:$HOME/.rvm/bin:$HOME/.cargo/bin"
 export EDITOR="nvim"
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export GPG_TTY=$(tty)
