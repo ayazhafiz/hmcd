@@ -1,4 +1,3 @@
-" Line numbers
 set number relativenumber
 augroup numbertoggle
   autocmd!
@@ -7,7 +6,7 @@ augroup numbertoggle
 augroup END
 
 " Tab to Spaces
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
 
 " Split to bottom and right
 set splitbelow
@@ -22,8 +21,8 @@ inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
-" Auto-wrap at 80 columns
-set textwidth=80
+" Auto-wrap at 100 columns
+set textwidth=100
 set formatoptions+=t
 
 " Nice status bar with word count, file information
@@ -56,13 +55,14 @@ set statusline+=\ %<%F			" file name, cut if needed at start
 set statusline+=\ %M			" modified flag
 set statusline+=%=			" separator from left to right justified
 set statusline+=\ %{WordCount()}\ words,
+set statusline+=\ :%c,	                " line column
 set statusline+=\ %l/%L\ lines,\ %P	" percentage through the file
 
-" Error columns beyond 80
-let w:m1=matchadd('Search', '\%<81v.\%>81v', -1)
-let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
-au BufWinEnter * let w:m1=matchadd('Search', '\%<81v.\%>81v', -1)
-au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+" Error columns beyond 100
+let w:m1=matchadd('Search', '\%<101v.\%>101v', -1)
+let w:m2=matchadd('ErrorMsg', '\%>100v.\+', -1)
+au BufWinEnter * let w:m1=matchadd('Search', '\%<101v.\%>101v', -1)
+au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>100v.\+', -1)
 
 " Highlight extra whitespace
 autocmd BufWinEnter <buffer> match Error /\s\+$/
@@ -111,10 +111,13 @@ let g:syntastic_mode_map = {
             \ }
 
 " Neoformat
-autocmd BufWritePre *.c,*.cc,*.cpp,*.h,*.hh,*.hpp,*.rs Neoformat
-autocmd BufWritePre *.js,*.ts,*.ex,*.rb,*.cr,*.py Neoformat
+autocmd BufWritePre *.js,*.ex,*.rb,*.cr,*.py Neoformat
 autocmd BufWritePre *.json,*.graphql,*.yaml,*.html Neoformat
 autocmd BufWritePre *.css,*.scss Neoformat prettier
+autocmd BufWritePre *.rs Neoformat
+
+" Clang format
+let g:clang_format#auto_format = 1
 
 " Latex Live Preview
 let g:livepreview_previewer = 'open -a Preview'

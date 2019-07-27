@@ -13,11 +13,19 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'vim-syntastic/syntastic'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
+
+" Formatting
 Plug 'sbdchd/neoformat'
+Plug 'rhysd/vim-clang-format'
 
 " PLs
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/DoxygenToolkit.vim'
+Plug 'ziglang/zig.vim'
+
+" Bazel
+Plug 'google/vim-maktaba'
+Plug 'bazelbuild/vim-bazel'
 
 " Git
 Plug 'tpope/vim-fugitive'

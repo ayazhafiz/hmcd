@@ -2,13 +2,15 @@
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/opt/openssl/lib/"
 export GOPATH="$HOME/gocode"
 export GOROOT="/usr/local/Cellar/go/1.12.4/libexec/"
-export PATH="$PATH:/usr/bin:$GOPATH/bin:$HOME/.rvm/bin:$HOME/.cargo/bin"
+export PATH="$PATH:/usr/bin:$GOPATH/bin:$HOME/.rvm/bin:$HOME/.cargo/bin:$HOME/Cloned/arcanist/bin"
+export PATH="/usr/local/opt/llvm/bin:$PATH"
 export EDITOR="nvim"
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export GPG_TTY=$(tty)
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+export BISON="/usr/local/opt/bison/bin/bison"
 
 # Aliases
 alias hmcd='/usr/bin/git --git-dir=$HOME/.hmcd/ --work-tree=$HOME'
@@ -45,3 +47,5 @@ source "$HOME/.purepower"
 # Load ZSH
 export ZSH="$HOME/.oh-my-zsh"
 source "$ZSH/oh-my-zsh.sh"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
