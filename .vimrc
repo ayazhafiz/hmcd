@@ -74,6 +74,9 @@ autocmd BufWinLeave <buffer> call clearmatches()
 inoremap kj <ESC>
 tnoremap kj <C-\><C-n>
 
+" Map leader
+let mapleader = ","
+
 """ Package Configurations
 
 " YCM

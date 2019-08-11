@@ -1,0 +1,3 @@
+[submodule ".scripts/z"]
+	path = .scripts/z
+	url = https://github.com/rupa/z

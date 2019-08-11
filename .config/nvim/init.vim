@@ -31,7 +31,7 @@ Plug 'bazelbuild/vim-bazel'
 Plug 'tpope/vim-fugitive'
 
 " Latex
-Plug 'lervag/vimtex'
+Plug 'vim-latex/vim-latex'
 Plug 'xuhdev/vim-latex-live-preview'
 
 " Markdown
