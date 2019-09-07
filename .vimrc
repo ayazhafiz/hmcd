@@ -88,8 +88,21 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_semantic_triggers = {
             \ 'c': [ 're!\w{1}' ],
             \ 'cpp,cuda,objcpp': [ 're!\w{1}' ],
+            \ 'python': [ 're!\w{1}' ],
             \ }
 let g:ycm_rust_src_path = "$HOME/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src"
+
+let g:ycm_python_interpreter_path = 'python'
+let g:ycm_python_sys_path = []
+let g:ycm_extra_conf_vim_data = [
+  \  'g:ycm_python_interpreter_path',
+  \  'g:ycm_python_sys_path'
+  \]
+let g:ycm_global_ycm_extra_conf = '~/global_extra_conf.py'
+
+"" Faster GoToDefinition
+nnoremap <leader>f :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>F :tab split \| YcmCompleter GoToDefinition<CR>
 
 " LanguageClient
 let g:LanguageClient_autoStart = 1
@@ -110,7 +123,7 @@ let g:syntastic_scss_checkers = ['sass_lint']
 let g:syntastic_mode_map = {
             \ 'mode': 'active',
             \ 'active_filetypes': [],
-            \ 'passive_filetypes': ['c', 'cpp'],
+            \ 'passive_filetypes': ['python', 'c', 'cpp'],
             \ }
 
 " Neoformat
@@ -125,3 +138,52 @@ let g:clang_format#auto_format = 1
 " Latex Live Preview
 let g:livepreview_previewer = 'open -a Preview'
 let g:vimtex_compiler_progname = 'nvr'
+
+" FZF
+let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --follow --exclude .git'
+
+" Custom macros
+"" Open new terminal at first tab
+nnoremap <leader>t :tabnew<Space>+term<Space>\|<Space>tabm<Space>0<Cr>
+"" Open fzf
+nnoremap <leader>z :Files<Cr>
+"" Open new tab with fzf
+nnoremap <leader>Z :tabnew\|:Files<Cr>
+
+""" Vim-latex
+augroup VimLatexIMAPs
+  au!
+  "" Create problem environment
+  au VimEnter * call IMAP('EPR', "\\begin{problem}{<++>}\<CR><++>\<CR>\\end{problem}<++>", 'tex')
+  "" Create sub-problem environment
+  au VimEnter * call IMAP('-EPR', "\\begin{problem}[]{<++>}\<CR><++>\<CR>\\end{problem}<++>", 'tex')
+  "" Create solution environment
+  au VimEnter * call IMAP('ESOL', "\\begin{solution}\<CR><++>\<CR>\\end{solution}<++>", 'tex')
+  "" Create align environment(s)
+  au VimEnter * call IMAP('EAL', "\\begin{align}\<CR><++>\<CR>\\end{align}<++>", 'tex')
+  au VimEnter * call IMAP('*EAL', "\\begin{align*}\<CR><++>\<CR>\\end{align*}<++>", 'tex')
+  "" Create subsection(s)
+  au VimEnter * call IMAP('SEC', "\\section{<++>}\<CR><++>", 'tex')
+  au VimEnter * call IMAP('*SEC', "\\section*{<++>}\<CR><++>", 'tex')
+  au VimEnter * call IMAP('SSEC', "\\subsection{<++>}\<CR><++>", 'tex')
+  au VimEnter * call IMAP('SSSEC', "\\subsubsection{<++>}\<CR><++>", 'tex')
+  "" Create text font
+  au VimEnter * call IMAP('FTX', '\text{<++>}<++>', 'tex')
+  "" Create summation
+  au VimEnter * call IMAP('SUM', '\sum_{<++>}^{<++>}<++>', 'tex')
+  "" Create boxed expression
+  au VimEnter * call IMAP('BOX', '\boxed{<++>}<++>', 'tex')
+augroup end
+"" Create a matrix with :Matrix <rows> <cols>
+function! CreateMatrix(rows, ...) abort
+  let cols = a:0 ? a:1 : a:rows
+  let matrix = ['\begin{bmatrix}']
+  call extend(matrix, repeat([repeat('<++> & ', cols - 1) . '<++>\\'], a:rows))
+  call add(matrix, '\end{bmatrix}<++>')
+  call append(line('.') - 1, matrix)
+endfunction
+command! -nargs=+ Matrix silent call CreateMatrix(<f-args>)
+
+" Project-specific .vimrc
+set exrc
+set secure
