@@ -1,3 +1,14 @@
+# Handles master Zsh configuration.
+# This file is governed under no license.
+#
+# Author: @ayazhafiz
+# Source: https://github.com/ayazhafiz/hmcd
+
+# Source common custom configurations
+ZSH_ETC="$HOME/.zsh_etc"
+source "$ZSH_ETC/nvim.zsh"
+source "$ZSH_ETC/hmcd.zsh"
+
 # Env
 export PATH="$PATH:/usr/bin:$GOPATH/bin:$HOME/.rvm/bin:$HOME/.cargo/bin:$HOME/Cloned/arcanist/bin"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
@@ -7,7 +18,6 @@ export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/opt/openssl/lib/"
 export GOPATH="$HOME/gocode"
 export GOROOT="/usr/local/Cellar/go/1.12.4/libexec/"
-export EDITOR="nvim"
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export GPG_TTY=$(tty)
 export NVM_DIR="$HOME/.nvm"
@@ -15,10 +25,11 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 export BISON="/usr/local/opt/bison/bin/bison"
 
+export CODE="$HOME/Code"
+export ANGULAR_ROOT="$CODE/Angular/angular"
+
 # Aliases
-alias hmcd='/usr/bin/git --git-dir=$HOME/.hmcd/ --work-tree=$HOME'
 alias alacritty='/Applications/Alacritty.app/Contents/MacOS/alacritty'
-alias vim="nvim"
 alias lldb="PATH=/usr/bin:$PATH lldb" # source MacOS python
 alias python="python3"
 alias pip="pip3"
@@ -58,3 +69,9 @@ source "$ZSH/oh-my-zsh.sh"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Load secret variables
+[ -f "$HOME/.secrets" ] && source "$HOME/.secrets"
+
+export YVM_DIR=/Users/hafiz/.yvm
+[ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
