@@ -1,0 +1,42 @@
+#!/bin/bash
+# Build the Angular langauge service as the dependency of a sample Angular project.
+# Usage:
+#       build-ng-ls [target]
+# Parameters:
+#       target  Target project to install the LS as a dependency on. Defaults to
+#               `$CODE/Angular/example'.
+#
+# Targeted primarily at Angular language service contributors. To learn more and
+# contribute, check out our repositories and pages:
+#       Core langauge service:
+#               https://github.com/angular/angular/tree/master/packages/language-service
+#       Langauge Server and VSCode extension:
+#               https://github.com/angular/vscode-ng-language-service
+#       Intro to the Angular language service:
+#               https://angular.io/guide/language-service
+set -ex
+
+readonly bazel_bin=$(bazel info bazel-bin)
+readonly test_dir=${1:-"$CODE/Angular/example"}
+
+if [[ -z "${ANGULAR_ROOT}" ]]; then
+  echoerr "Environment variable \`\$ANGULAR_ROOT' must be set to point at the Angular repo root
+  directory".
+  echoerr "You get get a clone of Angular at https://github.com/angular/angular."
+  exit 1
+fi
+
+if [[ "$PWD" != "$ANGULAR_ROOT" ]]; then
+  echoerr "Must be in the \`$ANGULAR_ROOT' directory; currently in \`$PWD'."
+  exit 1
+fi
+
+if [ ! -d "$test_dir" ]; then
+  echoerr "Required project directory \`$test_dir' does not exist. Please create it."
+  exit 1
+fi
+
+bazel build //packages/language-service:npm_package
+
+cd "${test_dir}"
+yarn add @angular/language-service@file:"${bazel_bin}/packages/language-service/npm_package"

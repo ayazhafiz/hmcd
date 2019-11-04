@@ -1,0 +1,42 @@
+#!/bin/bash
+# Finds and replaces regex patterns using `ag` and `sed'.
+# Usage:
+#       replace search replace [backup-ext]
+# Parameters:
+#       search  Regex pattern to search.
+#       replace String pattern to replace `search` occurences with.
+#       backup  File extension to rename replaced files with.
+#               Run `LESS="+/^ *-i" man sed` for more information.
+# Limitations:
+#       Will choke if either arguments contain a forward slash
+# Dependencies:
+#       ag: https://github.com/ggreer/the_silver_searcher
+#       sed: `man sed`
+#
+# Adapted from
+#       https://gist.github.com/hlissner/db74d23fc00bed81ff6
+set -ex
+
+if (( "$#" < 2 )); then
+  echoerr "\
+Finds and replaces regex patterns using \`ag\` and \`sed\`.
+Usage:
+  replace search replace [backup-ext]
+Parameters:
+  search  Regex pattern to search.
+  replace String pattern to replace \`search\` occurences with.
+  backup  File extension to rename replaced files with.
+              Run \`LESS=\"+/^ *-i\" man sed\` for more information.
+Limitations:
+  Will choke if either arguments contain a forward slash
+Dependencies:
+  ag: https://github.com/ggreer/the_silver_searcher
+  sed: \`man sed\`
+
+Adapted from
+  https://gist.github.com/hlissner/db74d23fc00bed81ff6"
+  exit 2
+fi
+
+readonly ext=${3:-''}
+ag -0 -l "$1" | xargs -0 sed -i "$ext" -e "s/$1/$2/g"
