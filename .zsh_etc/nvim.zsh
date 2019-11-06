@@ -10,8 +10,14 @@ if ! [ -x "$(command -v nvim)" ]; then
   return
 fi
 
-export EDITOR="nvim"
 export NVIM_CONFIG_PATH="$HOME/.config/nvim"
 export NVIM_SHARE_PATH="$HOME/.local/share/nvim"
 
-alias vim="nvim"
+# Flatten nested vim instances
+if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+  export VISUAL="nvr --remote-tab-wait +'set bufhidden=wipe'"
+else
+  export VISUAL="nvim"
+fi
+alias vim="$VISUAL"
+export EDITOR="$VISUAL"
