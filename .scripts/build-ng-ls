@@ -16,7 +16,7 @@
 #               https://angular.io/guide/language-service
 set -ex
 
-readonly bazel_bin=$(bazel info bazel-bin)
+readonly bazel_bin=$(yarn run --silent bazel info bazel-bin)
 readonly test_dir=${1:-"$CODE/Angular/example"}
 
 if [[ -z "${ANGULAR_ROOT}" ]]; then
@@ -36,7 +36,7 @@ if [ ! -d "$test_dir" ]; then
   exit 1
 fi
 
-bazel build //packages/language-service:npm_package
+yarn bazel build //packages/language-service:npm_package
 
 cd "${test_dir}"
 yarn add @angular/language-service@file:"${bazel_bin}/packages/language-service/npm_package"
