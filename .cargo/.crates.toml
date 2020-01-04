@@ -1,5 +1,8 @@
 [v1]
+"Xorfilter 0.0.1 (registry+https://github.com/rust-lang/crates.io-index)" = ["Xorfilter"]
+"cargo-bump 1.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-bump"]
 "cargo-edit 0.3.0-alpha.1 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-add", "cargo-rm", "cargo-upgrade"]
+"cargo-expand 0.4.17 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-expand"]
 "cargo-kcov 0.5.2 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-kcov"]
 "cargo-travis 0.0.7 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-coverage", "cargo-coveralls"]
 "clippy 0.0.212 (git+https://github.com/rust-lang/rust-clippy/#a9f8d3a034b30d0a2bedfe99c107aeeefbf8e176)" = ["cargo-clippy", "clippy-driver"]
