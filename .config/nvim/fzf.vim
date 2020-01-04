@@ -4,6 +4,10 @@
 " Author: @ayazhafiz
 " Source: https://github.com/ayazhafiz/hmcd
 
+" fzf Install
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 " Ignore non-git files.
 let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --follow --exclude .git --ignore-file .gitignore'
 

@@ -10,25 +10,18 @@ call validate#CheckEnv("NVIM_CONFIG_PATH", string(g:file))
 
 call plug#begin($NVIM_SHARE_PATH.'/plugged')
 
+source $NVIM_CONFIG_PATH/editing.vim
+source $NVIM_CONFIG_PATH/format.vim
+source $NVIM_CONFIG_PATH/latex.vim
+
 source $NVIM_CONFIG_PATH/ycm.vim
+source $NVIM_CONFIG_PATH/coc.vim
+source $NVIM_CONFIG_PATH/fzf.vim
+
+source $NVIM_CONFIG_PATH/pl.vim
 
 " Remote Neovim
 Plug 'mhinz/neovim-remote', { 'do': 'pip3 install -e .' }
-
-" Editing convinience
-Plug 'terryma/vim-multiple-cursors'
-Plug 'tpope/vim-surround'
-
-" Formatting
-Plug 'sbdchd/neoformat'
-Plug 'rhysd/vim-clang-format'
-
-" PLs
-Plug 'sheerun/vim-polyglot'
-Plug 'vim-scripts/DoxygenToolkit.vim'
-Plug 'ziglang/zig.vim'
-Plug 'IngoHeimbach/neco-vim'
-Plug 'neovimhaskell/haskell-vim'
 
 " Bazel
 Plug 'google/vim-maktaba'
@@ -37,17 +30,7 @@ Plug 'bazelbuild/vim-bazel'
 " Git
 Plug 'tpope/vim-fugitive'
 
-" Latex
-Plug 'vim-latex/vim-latex'
-Plug 'xuhdev/vim-latex-live-preview'
-
 " Markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-
-" fzf Install
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
-source $NVIM_CONFIG_PATH/fzf.vim
 
 call plug#end()
