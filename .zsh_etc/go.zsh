@@ -5,5 +5,5 @@
 # Source: https://github.com/ayazhafiz/hmcd
 
 export GOPATH="$HOME/gocode"
-export GOROOT="/usr/local/Cellar/go/1.12.4/libexec/"
+export GOROOT="/usr/local/opt/go/libexec"
 export PATH="$GOPATH/bin:$PATH"
