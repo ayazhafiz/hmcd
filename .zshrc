@@ -7,6 +7,10 @@
 # Source common custom configurations
 ZSH_ETC="$HOME/.zsh_etc"
 
+# Vi mode
+bindkey -M viins 'kj' vi-cmd-mode
+bindkey -v
+
 source "$ZSH_ETC/go.zsh"
 source "$ZSH_ETC/bison.zsh"
 source "$ZSH_ETC/haskell.zsh"
