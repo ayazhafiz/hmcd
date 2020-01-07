@@ -25,7 +25,7 @@
 !.yabairc
 !.zsh_etc/
 !.zshrc
-!Brewfile
+!Brewfile*
 !README.md
 
 # Ignore only superfluous configurations.
