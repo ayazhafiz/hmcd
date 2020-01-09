@@ -36,6 +36,7 @@
 !.config/nvim
 .config/nvim/*
 !.config/nvim/autoload
+!.config/nvim/*.json
 !.config/nvim/*.vim
 
 !.config/alacritty/
