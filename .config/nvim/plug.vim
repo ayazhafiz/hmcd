@@ -14,7 +14,7 @@ source $NVIM_CONFIG_PATH/editing.vim
 source $NVIM_CONFIG_PATH/format.vim
 source $NVIM_CONFIG_PATH/latex.vim
 
-source $NVIM_CONFIG_PATH/ycm.vim
+" source $NVIM_CONFIG_PATH/ycm.vim
 source $NVIM_CONFIG_PATH/coc.vim
 source $NVIM_CONFIG_PATH/fzf.vim
 
