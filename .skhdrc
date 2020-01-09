@@ -5,7 +5,7 @@
 cmd - return : Applications/Alacritty.app/Contents/MacOS/alacritty
 
 # open Safari
-cmd + shift - return : open -a Safari
+cmd + shift - return : open -a Firefox
 
 # close focused window
 alt - w : chunkc tiling::window --close
