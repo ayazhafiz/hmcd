@@ -1,5 +1,63 @@
 {
   "diagnostic.refreshOnInsertMode": true,
   "diagnostic.virtualText": true,
-  "diagnostic.messageTarget": "echo"
+  "diagnostic.messageTarget": "echo",
+  "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": [],
+      "rootPatterns": [
+        ".ccls-root",
+        "compile_commands.json"
+      ],
+      "initializationOptions": {
+        "cache": {
+          "directory": ".ccls-cache"
+        },
+        "clang": {
+          "extraArgs": [
+            "-isystem/Library/Developer/CommandLineTools/usr/include/c++/v1 -isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+          ]
+        }
+      }
+    },
+    "clangd": {
+      "command": "clangd",
+      "args": [
+        "--background-index"
+      ],
+      "rootPatterns": [
+        "compile_flags.txt",
+        "compile_commands.json",
+        ".git/",
+        ".hg/"
+      ],
+      "filetypes": [
+        "c",
+        "cpp",
+        "objc",
+        "objcpp"
+      ]
+    },
+    "haskell": {
+      "command": "hie-wrapper",
+      "args": [
+        "--lsp"
+      ],
+      "rootPatterns": [
+        "*.cabal",
+        "stack.yaml",
+        "cabal.project",
+        "package.yaml"
+      ],
+      "filetypes": [
+        "hs",
+        "lhs",
+        "haskell"
+      ],
+      "initializationOptions": {
+        "languageServerHaskell": {}
+      }
+    }
+  }
 }
