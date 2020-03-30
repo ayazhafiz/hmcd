@@ -19,11 +19,9 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 
-" Error columns beyond 100
-let w:m1=matchadd('Search', '\%<101v.\%>101v', -1)
-let w:m2=matchadd('WarningMsg', '\%>100v.\+', -1)
-au BufWinEnter * let w:m1=matchadd('Search', '\%<101v.\%>101v', -1)
-au BufWinEnter * let w:m2=matchadd('WarningMsg', '\%>100v.\+', -1)
+" Error columns beyond 10
+set colorcolumn=80
+highlight ColorColumn ctermbg=8
 
 " Highlight extra whitespace
 au BufWinEnter <buffer> match Error /\s\+$/
