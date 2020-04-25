@@ -1,0 +1,7 @@
+#!/bin/bash
+# Echoes to STDERR.
+# Usage:
+#       echoerr message
+
+git log --author="$@"  --pretty=tformat: --numstat \
+  | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "+%s\n-%s\n", add, subs }' -

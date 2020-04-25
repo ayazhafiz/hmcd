@@ -6,10 +6,7 @@
     "ccls": {
       "command": "ccls",
       "filetypes": [],
-      "rootPatterns": [
-        ".ccls-root",
-        "compile_commands.json"
-      ],
+      "rootPatterns": [".ccls-root", "compile_commands.json"],
       "initializationOptions": {
         "cache": {
           "directory": ".ccls-cache"
@@ -23,41 +20,30 @@
     },
     "clangd": {
       "command": "clangd",
-      "args": [
-        "--background-index"
-      ],
+      "args": ["--background-index"],
       "rootPatterns": [
         "compile_flags.txt",
         "compile_commands.json",
         ".git/",
         ".hg/"
       ],
-      "filetypes": [
-        "c",
-        "cpp",
-        "objc",
-        "objcpp"
-      ]
+      "filetypes": ["c", "cpp", "objc", "objcpp"]
     },
     "haskell": {
       "command": "hie-wrapper",
-      "args": [
-        "--lsp"
-      ],
+      "args": ["--lsp"],
       "rootPatterns": [
         "*.cabal",
         "stack.yaml",
         "cabal.project",
         "package.yaml"
       ],
-      "filetypes": [
-        "hs",
-        "lhs",
-        "haskell"
-      ],
+      "filetypes": ["hs", "lhs", "haskell"],
       "initializationOptions": {
         "languageServerHaskell": {}
       }
     }
-  }
+  },
+  "python.linting.flake8Enabled": true,
+  "python.linting.pylintEnabled": false
 }

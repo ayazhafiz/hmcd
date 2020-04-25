@@ -19,8 +19,9 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 
-" Error columns beyond 10
-set colorcolumn=80
+" Error columns beyond 100
+" To override, set colorcolumn in a project-specific .nvimrc
+set colorcolumn=100
 highlight ColorColumn ctermbg=8
 
 " Highlight extra whitespace
@@ -30,5 +31,6 @@ au InsertLeave <buffer> match Error /\s\+$/
 au BufWinLeave <buffer> call clearmatches()
 
 " Auto-wrap at 100 columns
+" To override, set textwidth in a project-specific .nvimrc
 set textwidth=100
 set formatoptions+=t
