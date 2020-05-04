@@ -11,6 +11,11 @@ ZSH_ETC="$HOME/.zsh_etc"
 bindkey -M viins 'kj' vi-cmd-mode
 bindkey -v
 
+# Env
+export PATH="$HOME/.local/bin:/usr/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+
 source "$ZSH_ETC/go.zsh"
 source "$ZSH_ETC/bison.zsh"
 source "$ZSH_ETC/haskell.zsh"
@@ -32,10 +37,6 @@ source "$ZSH_ETC/theme.zsh"
 source "$ZSH_ETC/gpg.zsh"
 source "$ZSH_ETC/openssl.zsh"
 source "$ZSH_ETC/nvim.zsh"
-source "$ZSH_ETC/nvm.zsh"
-
-# Env
-export PATH="$HOME/.local/bin:/usr/bin:$PATH"
 
 # Load ZSH via oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
@@ -43,4 +44,5 @@ source "$ZSH/oh-my-zsh.sh"
 
 # Scripts that must happen last
 source "$ZSH_ETC/fzf.zsh"
+source "$ZSH_ETC/nvm.zsh"
 source "$ZSH_ETC/ruby.zsh"

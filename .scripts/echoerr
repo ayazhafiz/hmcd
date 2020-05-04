@@ -1,6 +1,0 @@
-#!/bin/bash
-# Echoes to STDERR.
-# Usage:
-#       echoerr message
-
-echo "$@" 1>&2

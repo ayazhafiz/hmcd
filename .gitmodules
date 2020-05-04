@@ -1,3 +1,6 @@
 [submodule ".scripts/z"]
 	path = .scripts/z
 	url = https://github.com/rupa/z
+[submodule ".scripts/scripts"]
+	path = .scripts/scripts
+	url = https://github.com/ayazhafiz/scripts

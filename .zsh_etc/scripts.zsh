@@ -4,7 +4,9 @@
 # Author: @ayazhafiz
 # Source: https://github.com/ayazhafiz/hmcd
 
-export PATH="$HOME/.scripts:$PATH"
+export PATH="$HOME/.scripts/scripts:$PATH"
+export PATH="$HOME/.scripts/scripts/angular:$PATH"
+export PATH="$HOME/.scripts/scripts/latex:$PATH"
 
 # Load `z`
 . $HOME/.scripts/z/z.sh
