@@ -28,9 +28,8 @@ nnoremap <Leader>so :so %<CR>
 " Remap normal mode command key
 nnoremap ; :
 nnoremap : ;
-inoremap <silent> <Leader>w <Esc>:w<CR>
-inoremap <silent> <Leader>q <Esc>:q<CR>
 nnoremap <silent> <Leader>w <Esc>:w<CR>
+nnoremap <silent> <Leader>e <Esc>:noa w<CR>
 nnoremap <silent> <Leader>q <Esc>:q<CR>
 
 " Auto-close brackets
