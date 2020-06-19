@@ -26,6 +26,7 @@ source "$ZSH_ETC/yarn.zsh"
 
 source "$ZSH_ETC/codes.zsh"
 source "$ZSH_ETC/hmcd.zsh"
+source "$ZSH_ETC/projects.zsh"
 source "$ZSH_ETC/school.zsh"
 source "$ZSH_ETC/scripts.zsh"
 
@@ -46,3 +47,12 @@ source "$ZSH/oh-my-zsh.sh"
 source "$ZSH_ETC/fzf.zsh"
 source "$ZSH_ETC/nvm.zsh"
 source "$ZSH_ETC/ruby.zsh"
+
+export YVM_DIR=/Users/ayazhafiz/.yvm
+[ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/ayazhafiz/.sdkman"
+[[ -s "/Users/ayazhafiz/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/ayazhafiz/.sdkman/bin/sdkman-init.sh"
