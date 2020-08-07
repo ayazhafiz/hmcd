@@ -48,3 +48,8 @@ let g:ycm_extra_conf_vim_data = [
 "" Faster GoToDefinition
 nnoremap <Leader>f :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>F :tab split \| YcmCompleter GoToDefinition<CR>
+" Use K to show documentation in preview window
+nnoremap <silent> K :YcmCompleter GetDoc<CR>
+
+" Pmenu coloring
+hi Pmenu ctermbg=242

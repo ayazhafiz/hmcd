@@ -25,6 +25,6 @@ endfunction
 
 let g:fzf_action = {
   \ 'ctrl-q': function('s:build_quickfix_list'),
-  \ 'ctrl-t': 'tabnew',
+  \ 'ctrl-o': 'tabnew',
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }

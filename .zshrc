@@ -8,8 +8,8 @@
 ZSH_ETC="$HOME/.zsh_etc"
 
 # Vi mode
-bindkey -M viins 'kj' vi-cmd-mode
-bindkey -v
+set -o vi
+bindkey -M viins 'jj' vi-cmd-mode
 
 # Env
 export PATH="$HOME/.local/bin:/usr/bin:$PATH"
