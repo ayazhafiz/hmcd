@@ -5,14 +5,14 @@
 # Source: https://github.com/ayazhafiz/hmcd
 source "$ZSH_ETC/status_msg.zsh"
 
-if ! [ -x "$(command -v git)" ]; then
+if $(type -P git 2>/dev/null); then
   warn "Git (\`git\') is not installed; not loading configuration." >&2
   return
 fi
 
-readonly HMCD_DIR=".hmcd"
-readonly HMCD="git --git-dir=$HOME/$HMCD_DIR --work-tree=$HOME"
-readonly GIT='\git'
+HMCD_DIR=".hmcd"
+HMCD="git --git-dir=$HOME/$HMCD_DIR --work-tree=$HOME"
+GIT='\git'
 
 function chpwd {
   if [ -d "$HMCD_DIR" ]; then
