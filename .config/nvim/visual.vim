@@ -9,3 +9,6 @@
 vnoremap <nowait> <Leader>r "hy:%s/<C-r>h//gc<Left><Left><Left>
 "" Unsafe version: all at once
 vnoremap <nowait> <Leader>R "hy:%s/<C-r>h//g<Left><Left>
+
+" Copy to clipboard
+vnoremap <nowait> <Leader>c "+y
