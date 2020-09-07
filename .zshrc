@@ -42,6 +42,7 @@ source "$ZSH_ETC/nvim.zsh"
 # Load ZSH via oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
 source "$ZSH/oh-my-zsh.sh"
+bindkey -v
 
 # Scripts that must happen last
 source "$ZSH_ETC/fzf.zsh"
