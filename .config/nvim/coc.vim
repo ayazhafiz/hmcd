@@ -43,7 +43,7 @@ map <silent> <Leader>D <Plug>(coc-diagnostic-next)
 map <silent> <Leader>f <Plug>(coc-definition)
 map <silent> <Leader>y <Plug>(coc-type-definition)
 map <silent> <Leader>i <Plug>(coc-implementation)
-map <silent> <Leader>r <Plug>(coc-references)
+map <silent> <Leader>rr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>

@@ -10,6 +10,7 @@ ZSH_ETC="$HOME/.zsh_etc"
 # Vi mode
 set -o vi
 bindkey -M viins 'jj' vi-cmd-mode
+bindkey -v
 
 # Env
 export PATH="$HOME/.local/bin:/usr/bin:$PATH"
@@ -42,18 +43,8 @@ source "$ZSH_ETC/nvim.zsh"
 # Load ZSH via oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
 source "$ZSH/oh-my-zsh.sh"
-bindkey -v
 
 # Scripts that must happen last
 source "$ZSH_ETC/fzf.zsh"
 source "$ZSH_ETC/nvm.zsh"
 source "$ZSH_ETC/ruby.zsh"
-
-export YVM_DIR=/Users/ayazhafiz/.yvm
-[ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/ayazhafiz/.sdkman"
-[[ -s "/Users/ayazhafiz/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/ayazhafiz/.sdkman/bin/sdkman-init.sh"
