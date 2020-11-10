@@ -7,3 +7,4 @@
 
 # https://github.com/ayazhafiz/slide
 alias ladder='./ladder';
+alias slide_lsp="$CODE/Rust/slide/editor/server/target/debug/server";

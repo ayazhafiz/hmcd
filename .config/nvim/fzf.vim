@@ -13,6 +13,7 @@ let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --follow --exclude .git --ignor
 
 " Open fzf
 nnoremap <silent> <Leader>z :Files<Cr>
+nnoremap <silent> <Leader>/ :Ag<Cr>
 nnoremap <silent> <Leader>h :History:<Cr>
 nnoremap <silent> <Leader>b :Buffers<Cr>
 
@@ -28,3 +29,5 @@ let g:fzf_action = {
   \ 'ctrl-o': 'tabnew',
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
+
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'border': 'sharp' } }
