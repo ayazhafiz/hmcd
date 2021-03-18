@@ -25,5 +25,16 @@ augroup END
 augroup FormatRust
   au BufWritePre *.rs Neoformat
 augroup END
+augroup FormatHaskell
+  au BufWritePre *.hs Neoformat brittany
+augroup END
+augroup FormatGo
+  au BufWritePre *.go Neoformat
+augroup END
+augroup FormatML
+  au BufWritePre *.ml Neoformat
+augroup END
+
+autocmd filetype lisp,scheme setlocal equalprg=/Users/hafiz/.nvm/versions/node/v12.14.1/bin/scmindent
 
 let g:clang_format#auto_format = 1

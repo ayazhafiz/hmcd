@@ -21,3 +21,4 @@ else
 fi
 alias vim="$VISUAL"
 export EDITOR="$VISUAL"
+alias vt="vim +term"

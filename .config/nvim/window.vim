@@ -34,3 +34,9 @@ au BufWinLeave <buffer> call clearmatches()
 " To override, set textwidth in a project-specific .nvimrc
 set textwidth=80
 set formatoptions+=t
+
+" Diff highlights
+" hi DiffText     ctermbg=242
+hi DiffChange   ctermbg=222
+hi DiffDelete   ctermbg=8
+hi DiffAdd      ctermbg=65

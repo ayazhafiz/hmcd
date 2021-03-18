@@ -4,7 +4,7 @@
 " Author: @ayazhafiz
 " Source: https://github.com/ayazhafiz/hmcd
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim'
 
 let g:coc_global_extensions = [
   \ 'coc-angular',
@@ -44,6 +44,9 @@ map <silent> <Leader>f <Plug>(coc-definition)
 map <silent> <Leader>y <Plug>(coc-type-definition)
 map <silent> <Leader>i <Plug>(coc-implementation)
 map <silent> <Leader>rr <Plug>(coc-references)
+
+" Remap keys for actions
+nmap <leader>rn <Plug>(coc-rename)
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>

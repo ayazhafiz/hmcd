@@ -11,6 +11,7 @@ Plug 'ziglang/zig.vim'
 Plug 'IngoHeimbach/neco-vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'itspriddle/vim-shellcheck'
+" Plug 'kovisoft/slimv'
 
 " Shellcheck
 au FileType sh nnoremap <buffer> <leader>c :ShellCheck!<CR>

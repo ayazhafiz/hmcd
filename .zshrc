@@ -48,3 +48,9 @@ source "$ZSH/oh-my-zsh.sh"
 source "$ZSH_ETC/fzf.zsh"
 source "$ZSH_ETC/nvm.zsh"
 source "$ZSH_ETC/ruby.zsh"
+
+# opam configuration
+test -r /Users/hafiz/.opam/opam-init/init.zsh && . /Users/hafiz/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f "/Users/hafiz/.ghcup/env" ] && source "/Users/hafiz/.ghcup/env" # ghcup-env

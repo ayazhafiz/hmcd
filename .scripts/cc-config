@@ -1,0 +1,8 @@
+#!/bin/bash
+# Generates a "compile_commands.json" file in a CMake project.
+# This intended for usage with C++ langauge services like ccls.
+# Usage:
+#   cc-config
+set -ex
+
+cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1

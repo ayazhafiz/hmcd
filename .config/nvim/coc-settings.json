@@ -1,7 +1,9 @@
 {
+  "codeLens.enable": false,
   "diagnostic.refreshOnInsertMode": true,
   "diagnostic.virtualText": true,
   "diagnostic.messageTarget": "echo",
+  "diagnostic.checkCurrentLine": true,
   "languageserver": {
     "ccls": {
       "command": "ccls",
@@ -21,29 +23,41 @@
     "clangd": {
       "command": "clangd",
       "args": ["--background-index"],
-      "rootPatterns": [
-        "compile_flags.txt",
-        "compile_commands.json",
-        ".git/",
-        ".hg/"
-      ],
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".git/", ".hg/"],
       "filetypes": ["c", "cpp", "objc", "objcpp"]
     },
     "haskell": {
-      "command": "hie-wrapper",
+      "command": "haskell-language-server-wrapper",
       "args": ["--lsp"],
-      "rootPatterns": [
-        "*.cabal",
-        "stack.yaml",
-        "cabal.project",
-        "package.yaml"
-      ],
-      "filetypes": ["hs", "lhs", "haskell"],
+      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
+      "filetypes": ["haskell", "lhaskell"]
+    },
+    "slide": {
+      "command": "/Users/hafiz/Code/Rust/slide/target/debug/slide_ls",
+      "rootPatterns": ["*"],
+      "filetypes": ["md", "markdown", "slide"],
       "initializationOptions": {
-        "languageServerHaskell": {}
+        "document_parsers": {
+          "md": "```math\\n((?:.|\\n)*?)\\n```",
+          "slide": "(.*)"
+        }
       }
+    },
+    "elmLS": {
+      "command": "elm-language-server",
+      "filetypes": ["elm"]
+    },
+    "zls": {
+      "command": "~/Code/Zig/zls/zig-cache/bin/zls",
+      "filetypes": ["zig"]
+    },
+    "ocaml": {
+      "command": "opam",
+      "args": ["config", "exec", "--", "ocaml-language-server", "--stdio"],
+      "filetypes": ["ocaml"]
     }
   },
   "python.linting.flake8Enabled": true,
-  "python.linting.pylintEnabled": false
+  "python.linting.pylintEnabled": false,
+  "rust-analyzer.serverPath": "~/.local/bin/rust-analyzer"
 }
