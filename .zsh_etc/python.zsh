@@ -13,4 +13,5 @@ export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 export PROJECT_HOME=$HOME/Code
+export PYTHONPATH=$HOME/usr/lib/python-2.7/site-packages
 source /usr/local/bin/virtualenvwrapper.sh

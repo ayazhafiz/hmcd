@@ -1,6 +1,7 @@
 default_host_triple = "x86_64-apple-darwin"
-default_toolchain = "stable-x86_64-apple-darwin"
+default_toolchain = "nightly-x86_64-apple-darwin"
 profile = "minimal"
 version = "12"
 
 [overrides]
+"/Users/hafiz/Code/Rust/MIRAI" = "nightly-2020-09-10-x86_64-apple-darwin"

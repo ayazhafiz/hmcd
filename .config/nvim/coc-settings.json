@@ -1,9 +1,10 @@
 {
-  "codeLens.enable": false,
+  "tsserver.log": "normal",
+  "codeLens.enable": true,
   "diagnostic.refreshOnInsertMode": true,
   "diagnostic.virtualText": true,
-  "diagnostic.messageTarget": "echo",
-  "diagnostic.checkCurrentLine": true,
+  "diagnostic.messageTarget": "float",
+  "diagnostic.checkCurrentLine": false,
   "languageserver": {
     "ccls": {
       "command": "ccls",
@@ -52,12 +53,14 @@
       "filetypes": ["zig"]
     },
     "ocaml": {
-      "command": "opam",
-      "args": ["config", "exec", "--", "ocaml-language-server", "--stdio"],
+      "command": "ocamllsp",
       "filetypes": ["ocaml"]
+    },
+    "asm": {
+      "command": "asm-lsp",
+      "filetypes": ["nasm"]
     }
   },
   "python.linting.flake8Enabled": true,
-  "python.linting.pylintEnabled": false,
-  "rust-analyzer.serverPath": "~/.local/bin/rust-analyzer"
+  "python.linting.pylintEnabled": false
 }

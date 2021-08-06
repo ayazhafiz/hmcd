@@ -32,7 +32,7 @@ augroup FormatGo
   au BufWritePre *.go Neoformat
 augroup END
 augroup FormatML
-  au BufWritePre *.ml Neoformat
+  au BufWritePre *.ml,*.mli Neoformat
 augroup END
 
 autocmd filetype lisp,scheme setlocal equalprg=/Users/hafiz/.nvm/versions/node/v12.14.1/bin/scmindent

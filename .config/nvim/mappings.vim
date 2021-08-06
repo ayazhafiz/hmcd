@@ -12,7 +12,6 @@ tnoremap kj <C-\><C-n>
 
 " Remove highlight
 nnoremap <Leader>n :noh<CR>
-
 " Open vimconfig
 nnoremap <leader>v :edit $MYVIMRC<CR>
 
@@ -33,8 +32,6 @@ nnoremap <silent> <Leader>e <Esc>:noa w<CR>
 nnoremap <silent> <Leader>q <Esc>:q<CR>
 
 " Auto-close brackets
-inoremap ' ""<++><Left><Left><Left><Left><Left>
-inoremap ' ''<++><Left><Left><Left><Left><Left>
 inoremap ( ()<++><Left><Left><Left><Left><Left>
 inoremap [ []<++><Left><Left><Left><Left><Left>
 inoremap { {}<++><Left><Left><Left><Left><Left>

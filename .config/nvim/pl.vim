@@ -12,6 +12,10 @@ Plug 'IngoHeimbach/neco-vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'itspriddle/vim-shellcheck'
 " Plug 'kovisoft/slimv'
+Plug 'ocaml/vim-ocaml'
+Plug 'whonore/Coqtail'
 
 " Shellcheck
 au FileType sh nnoremap <buffer> <leader>c :ShellCheck!<CR>
+
+" let g:ocaml_folding=1

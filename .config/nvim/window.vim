@@ -37,6 +37,8 @@ set formatoptions+=t
 
 " Diff highlights
 " hi DiffText     ctermbg=242
-hi DiffChange   ctermbg=222
+hi DiffChange   ctermbg=53
 hi DiffDelete   ctermbg=8
-hi DiffAdd      ctermbg=65
+hi DiffAdd      ctermbg=22
+
+au BufRead,BufNewFile *.nasm		set filetype=nasm

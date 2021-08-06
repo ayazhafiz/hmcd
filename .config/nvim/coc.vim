@@ -109,3 +109,5 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " Pmenu coloring
 hi Pmenu ctermbg=242
+hi CocWarningFloat ctermfg=214
+hi CocErrorFloat ctermfg=213

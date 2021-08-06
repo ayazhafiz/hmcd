@@ -5,10 +5,10 @@
 cmd - return : Applications/Alacritty.app/Contents/MacOS/alacritty
 
 # open Safari
-cmd + shift - return : open -a Firefox
+cmd + shift - return : osascript -e 'tell application "Safari" to make new document'
 
 # close focused window
-alt - w : chunkc tiling::window --close
+alt - w : yabai -m window --close
 
 # focus window
 alt - h : yabai -m window --focus west
@@ -47,13 +47,16 @@ shift + alt - right  : yabai -m window --grid 1:2:1:0:1:1
 shift + cmd - n : yabai -m space --create && \
                   index="$(yabai -m query --displays --display | jq '.spaces[-1]')" && \
                   yabai -m window --space "${index}" && \
-                  yabai -m space --focus "${index}"
-
+                  yabai -m space --focus "${index}" && \
+                  yabai -m space --toggle padding && \
+                  yabai -m space --toggle gap
 
 # create desktop and follow focus - uses jq for parsing json (brew install jq)
 cmd + alt - n : yabai -m space --create;\
                   index="$(yabai -m query --displays --display | jq '.spaces[-1]')" && \
-                  yabai -m space --focus "${index}"
+                  yabai -m space --focus "${index}" && \
+                  yabai -m space --toggle padding && \
+                  yabai -m space --toggle gap
 
 # destroy desktop
 cmd + alt - w : yabai -m space --destroy

@@ -36,4 +36,6 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 let todoist = { 'key': $TODOIST_API_KEY }
 Plug 'romgrk/todoist.vim', { 'do': ':TodoistInstall' }
 
+Plug 'dstein64/vim-startuptime'
+
 call plug#end()
