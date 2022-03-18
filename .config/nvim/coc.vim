@@ -4,7 +4,7 @@
 " Author: @ayazhafiz
 " Source: https://github.com/ayazhafiz/hmcd
 
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 let g:coc_global_extensions = [
   \ 'coc-angular',

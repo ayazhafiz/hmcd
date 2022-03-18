@@ -4,4 +4,5 @@ profile = "minimal"
 version = "12"
 
 [overrides]
+"/Users/hafiz/Code/Roc/roc" = "1.58-x86_64-apple-darwin"
 "/Users/hafiz/Code/Rust/MIRAI" = "nightly-2020-09-10-x86_64-apple-darwin"

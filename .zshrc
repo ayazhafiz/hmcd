@@ -16,6 +16,8 @@ bindkey -v
 export PATH="$HOME/.local/bin:/usr/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+# export PATH="$HOME/Code/Zig/source/zig-0.9.0-dev:$PATH"
 
 source "$ZSH_ETC/go.zsh"
 source "$ZSH_ETC/bison.zsh"
@@ -54,3 +56,11 @@ test -r /Users/hafiz/.opam/opam-init/init.zsh && . /Users/hafiz/.opam/opam-init/
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f "/Users/hafiz/.ghcup/env" ] && source "/Users/hafiz/.ghcup/env" # ghcup-env
+if [ -e /Users/hafiz/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/hafiz/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+export YVM_DIR=/Users/hafiz/.yvm
+[ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
+
+# Wasmer
+export WASMER_DIR="/Users/hafiz/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"

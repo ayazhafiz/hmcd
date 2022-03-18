@@ -32,6 +32,7 @@ Plug 'tpope/vim-fugitive'
 
 " Markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'preservim/tagbar'
 
 let todoist = { 'key': $TODOIST_API_KEY }
 Plug 'romgrk/todoist.vim', { 'do': ':TodoistInstall' }

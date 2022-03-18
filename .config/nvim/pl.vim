@@ -19,3 +19,4 @@ Plug 'whonore/Coqtail'
 au FileType sh nnoremap <buffer> <leader>c :ShellCheck!<CR>
 
 " let g:ocaml_folding=1
+let g:markdown_folding=1

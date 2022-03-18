@@ -42,3 +42,5 @@ hi DiffDelete   ctermbg=8
 hi DiffAdd      ctermbg=22
 
 au BufRead,BufNewFile *.nasm		set filetype=nasm
+au BufRead,BufNewFile *.ll		  set filetype=llvm
+au BufRead,BufNewFile *.roc		  set filetype=elm

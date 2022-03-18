@@ -1,5 +1,21 @@
 {
   "tsserver.log": "normal",
+  "rust-analyzer.checkOnSave.enable": true,
+  "rust-analyzer.checkOnSave.extraArgs": ["--target-dir", "/tmp/rust-analyzer-check"],
+  "rust-analyzer.cargo.allFeatures": true,
+  "rust-analyzer.experimental.procAttrMacros": false,
+  // "rust-analyzer.checkOnSave.overrideCommand": [
+  //   "./x.py",
+  //   "check",
+  //   "--json-output"
+  // ],
+  // "rust-analyzer.rustfmt.overrideCommand": [
+  //   "./build/x86_64-apple-darwin/stage0/bin/rustfmt",
+  //   "--edition=2021"
+  // ],
+  "rust-analyzer.cargo.runBuildScripts": false,
+  "rust-analyzer.rustcSource": "./Cargo.toml",
+  "rust-analyzer.procMacro.enable": false,
   "codeLens.enable": true,
   "diagnostic.refreshOnInsertMode": true,
   "diagnostic.virtualText": true,
@@ -44,12 +60,12 @@
         }
       }
     },
-    "elmLS": {
-      "command": "elm-language-server",
-      "filetypes": ["elm"]
-    },
+    // "elmLS": {
+    //   "command": "elm-language-server",
+    //   "filetypes": ["elm"]
+    // },
     "zls": {
-      "command": "~/Code/Zig/zls/zig-cache/bin/zls",
+      "command": "~/Code/Zig/zls/zig-out/bin/zls",
       "filetypes": ["zig"]
     },
     "ocaml": {
@@ -60,7 +76,5 @@
       "command": "asm-lsp",
       "filetypes": ["nasm"]
     }
-  },
-  "python.linting.flake8Enabled": true,
-  "python.linting.pylintEnabled": false
+  }
 }
