@@ -12,3 +12,8 @@ vnoremap <nowait> <Leader>R "hy:%s/<C-r>h//g<Left><Left>
 
 " Copy to clipboard
 vnoremap <nowait> <Leader>c "+y
+
+" Visual select line without leading whitespace
+nnoremap <nowait> Z ^vg_
+
+let g:gh_open_command = 'fn() { echo "$@" | pbcopy; }; fn '

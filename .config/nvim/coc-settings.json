@@ -1,10 +1,31 @@
 {
+  "list.previewSplitRight": true,
+  "list.normalMappings": {
+    "v": "action:vsplit"
+  },
   "tsserver.log": "normal",
-  "rust-analyzer.checkOnSave.enable": true,
-  "rust-analyzer.checkOnSave.extraArgs": ["--target-dir", "/tmp/rust-analyzer-check"],
-  "rust-analyzer.cargo.allFeatures": true,
-  "rust-analyzer.experimental.procAttrMacros": false,
-  // "rust-analyzer.checkOnSave.overrideCommand": [
+  "rust-analyzer.checkOnSave": true,
+  "rust-analyzer.check.command": "clippy",
+  "rust-analyzer.check.extraArgs": [
+    "--target-dir",
+    "/tmp/rust-analyzer-check"
+  ],
+  "rust-analyzer.cargo.features": "all",
+  "rust-analyzer.debug.runtime": "vimspector",
+  "rust-analyzer.procMacro.enable": true,
+  "rust-analyzer.procMacro.attributes.enable": true,
+  // TODO turn on after https://github.com/neovim/neovim/pull/9496
+  "rust-analyzer.inlayHints.typeHints.enable": false,
+  "rust-analyzer.inlayHints.chainingHints.enable": true,
+  "rust-analyzer.inlayHints.reborrowHints.enable": "never",
+  "rust-analyzer.inlayHints.closingBraceHints.enable": true,
+  "rust-analyzer.inlayHints.closingBraceHints.minLines": 50,
+  "coc.preferences.formatOnSave": true,
+  // TODO turn on after https://github.com/neovim/neovim/pull/9496
+  "inlayHint.enableParameter": false,
+  "inlayHint.display": true,
+  // "rust-analyzer.diagnostics.disabled": ["inactive-code"],
+  // "inactive-coderust-analyzer.checkOnSave.overrideCommand": [
   //   "./x.py",
   //   "check",
   //   "--json-output"
@@ -13,19 +34,39 @@
   //   "./build/x86_64-apple-darwin/stage0/bin/rustfmt",
   //   "--edition=2021"
   // ],
-  "rust-analyzer.cargo.runBuildScripts": false,
-  "rust-analyzer.rustcSource": "./Cargo.toml",
-  "rust-analyzer.procMacro.enable": false,
-  "codeLens.enable": true,
+  "rust-analyzer.cargo.buildScripts.enable": false,
+  // "rust-analyzer.rustc.source": "./Cargo.toml",
+  "zig.enabled": true,
+  "zig.startUpMessage": true,
+  "zig.path": "zls",
+  "zig.debugLog": false,
+  //
+  // Both of the following lines are required to use mypy for typechecking
+  // https://github.com/fannheyward/coc-pyright/issues/848
+  // "python.analysis.typeCheckingMode": "off",
+  // "python.linting.mypyEnabled": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.formatting.provider": "black",
+  //
+  "codeLens.enable": false,
   "diagnostic.refreshOnInsertMode": true,
-  "diagnostic.virtualText": true,
+  // "diagnostic.virtualText": true,
   "diagnostic.messageTarget": "float",
   "diagnostic.checkCurrentLine": false,
+  "diagnostic.level": "information",
+  "diagnostic-languageserver.enable": true,
+  "diagnostic-languageserver.filetypes": {
+    "sh": "shellcheck"
+  },
+  "suggest.noselect": false,
   "languageserver": {
     "ccls": {
       "command": "ccls",
       "filetypes": [],
-      "rootPatterns": [".ccls-root", "compile_commands.json"],
+      "rootPatterns": [
+        ".ccls-root",
+        "compile_commands.json"
+      ],
       "initializationOptions": {
         "cache": {
           "directory": ".ccls-cache"
@@ -39,20 +80,49 @@
     },
     "clangd": {
       "command": "clangd",
-      "args": ["--background-index"],
-      "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".git/", ".hg/"],
-      "filetypes": ["c", "cpp", "objc", "objcpp"]
+      "args": [
+        "--background-index"
+      ],
+      "rootPatterns": [
+        "compile_flags.txt",
+        "compile_commands.json",
+        ".git/",
+        ".hg/"
+      ],
+      "filetypes": [
+        "c",
+        "cpp",
+        "objc",
+        "objcpp"
+      ]
     },
     "haskell": {
       "command": "haskell-language-server-wrapper",
-      "args": ["--lsp"],
-      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
-      "filetypes": ["haskell", "lhaskell"]
+      "args": [
+        "--lsp"
+      ],
+      "rootPatterns": [
+        "*.cabal",
+        "stack.yaml",
+        "cabal.project",
+        "package.yaml",
+        "hie.yaml"
+      ],
+      "filetypes": [
+        "haskell",
+        "lhaskell"
+      ]
     },
     "slide": {
-      "command": "/Users/hafiz/Code/Rust/slide/target/debug/slide_ls",
-      "rootPatterns": ["*"],
-      "filetypes": ["md", "markdown", "slide"],
+      "command": "/Users/hafiz/.cargo/bin/slide_ls",
+      "rootPatterns": [
+        "*"
+      ],
+      "filetypes": [
+        "md",
+        "markdown",
+        "slide"
+      ],
       "initializationOptions": {
         "document_parsers": {
           "md": "```math\\n((?:.|\\n)*?)\\n```",
@@ -60,21 +130,45 @@
         }
       }
     },
+    "roc": {
+      "command": "/Users/hafiz/Code/Roc/roc/crates/lang_srv/debug_server.sh",
+      "filetypes": [
+        "roc"
+      ]
+    },
     // "elmLS": {
     //   "command": "elm-language-server",
     //   "filetypes": ["elm"]
     // },
-    "zls": {
-      "command": "~/Code/Zig/zls/zig-out/bin/zls",
-      "filetypes": ["zig"]
-    },
     "ocaml": {
       "command": "ocamllsp",
-      "filetypes": ["ocaml"]
+      "filetypes": [
+        "ocaml"
+      ]
     },
     "asm": {
       "command": "asm-lsp",
-      "filetypes": ["nasm"]
+      "filetypes": [
+        "nasm"
+      ]
+    },
+    "nix": {
+      "command": "rnix-lsp",
+      "filetypes": [
+        "nix"
+      ]
     }
+    //"csharp-ls": {
+    //  "command": "/Users/hafiz/.dotnet/tools/csharp-ls",
+    //  "filetypes": [
+    //    "cs"
+    //  ],
+    //  "rootPatterns": [
+    //    "*.csproj",
+    //    ".vim/",
+    //    ".git/",
+    //    ".hg/"
+    //  ]
+    //}
   }
 }

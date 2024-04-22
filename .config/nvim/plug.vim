@@ -29,14 +29,38 @@ Plug 'bazelbuild/vim-bazel'
 
 " Git
 Plug 'tpope/vim-fugitive'
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'rhysd/conflict-marker.vim'
 
 " Markdown
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-Plug 'preservim/tagbar'
+" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+" Plug 'preservim/tagbar'
 
 let todoist = { 'key': $TODOIST_API_KEY }
 Plug 'romgrk/todoist.vim', { 'do': ':TodoistInstall' }
 
 Plug 'dstein64/vim-startuptime'
+
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+
+Plug 'puremourning/vimspector'
+
+Plug 'rust-lang/rust.vim'
+
+Plug 'cshuaimin/ssr.nvim'
+
+Plug 'ruanyl/vim-gh-line'
+
+" Theme
+Plug 'navarasu/onedark.nvim'
+
+" Curse?
+" Plug 'github/copilot.vim'
+
+Plug 'preservim/nerdtree'
+
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-dispatch'
 
 call plug#end()

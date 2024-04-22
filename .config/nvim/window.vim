@@ -37,10 +37,10 @@ set formatoptions+=t
 
 " Diff highlights
 " hi DiffText     ctermbg=242
-hi DiffChange   ctermbg=53
-hi DiffDelete   ctermbg=8
-hi DiffAdd      ctermbg=22
+" hi DiffChange   ctermbg=53
+" hi DiffDelete   ctermbg=8
+" hi DiffAdd      ctermbg=22
 
 au BufRead,BufNewFile *.nasm		set filetype=nasm
 au BufRead,BufNewFile *.ll		  set filetype=llvm
-au BufRead,BufNewFile *.roc		  set filetype=elm
+au BufRead,BufNewFile *.roc		  set filetype=roc syntax=elm
