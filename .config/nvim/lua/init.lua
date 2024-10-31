@@ -73,4 +73,6 @@ require("ssr").setup {
   },
 }
 
+require("supermaven-nvim").setup({})
+
 vim.keymap.set({ "n", "x" }, "<leader>sr", function() require("ssr").open() end)

@@ -1,4 +1,3 @@
-live_config_reload = true
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -36,7 +35,10 @@ persistent_logging = false
 render_timer = false
 
 [font]
-size = 10.0
+size = 16.0
+
+[font.normal]
+family = "MesloLGS NF"
 
 [font.glyph_offset]
 x = 0
@@ -634,3 +636,6 @@ lines = 0
 [window.padding]
 x = 20
 y = 20
+
+[general]
+live_config_reload = true

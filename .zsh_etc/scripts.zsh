@@ -9,4 +9,4 @@ export PATH="$HOME/.scripts/scripts/angular:$PATH"
 export PATH="$HOME/.scripts/scripts/latex:$PATH"
 
 # Load `z`
-. $HOME/.scripts/z/z.sh
+# . $HOME/.scripts/z/z.sh

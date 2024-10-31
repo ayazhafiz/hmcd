@@ -8,7 +8,9 @@ plugins=(git
          zsh-autosuggestions
          zsh-completions
          zsh-syntax-highlighting
-         alias-tips)
+         alias-tips
+	 z
+   )
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 

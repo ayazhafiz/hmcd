@@ -5,7 +5,7 @@
 " Source: https://github.com/ayazhafiz/hmcd
 
 Plug 'vim-latex/vim-latex'
-Plug 'xuhdev/vim-latex-live-preview'
+"Plug 'xuhdev/vim-latex-live-preview'
 
 let g:livepreview_previewer = 'open -a Preview'
 let g:vimtex_compiler_progname = 'nvr'

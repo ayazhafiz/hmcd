@@ -4,4 +4,4 @@
 # Author: @ayazhafiz
 # Source: https://github.com/ayazhafiz/hmcd
 
-eval "$(frum init)"
+#eval "$(frum init)"

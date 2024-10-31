@@ -8,4 +8,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 alias alacritty='/Applications/Alacritty.app/Contents/MacOS/alacritty'
-alias xs="exa -lhga --git"
+alias xs="eza -lhga --git"

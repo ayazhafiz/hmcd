@@ -43,7 +43,7 @@ Plug 'dstein64/vim-startuptime'
 
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
-Plug 'puremourning/vimspector'
+" Plug 'puremourning/vimspector'
 
 Plug 'rust-lang/rust.vim'
 
@@ -56,6 +56,7 @@ Plug 'navarasu/onedark.nvim'
 
 " Curse?
 " Plug 'github/copilot.vim'
+Plug 'supermaven-inc/supermaven-nvim'
 
 Plug 'preservim/nerdtree'
 
@@ -63,4 +64,8 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-dispatch'
 
+Plug 'samjwill/nvim-unception'
+
 call plug#end()
+
+let g:unception_open_buffer_in_new_tab = 1
