@@ -7,10 +7,10 @@
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 let g:coc_global_extensions = [
-  \ 'coc-angular',
   \ 'coc-tsserver',
   \ 'coc-pyright',
   \ 'coc-json',
+  \ 'coc-eslint',
   \ ]
 
 " if hidden is not set, TextEdit might fail.
