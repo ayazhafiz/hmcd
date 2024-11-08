@@ -157,18 +157,29 @@
       "filetypes": [
         "nix"
       ]
+    },
+    "ruff": {
+      "command": "uv",
+      "args": [
+        "run",
+        "ruff",
+        "server"
+      ],
+      "filetypes": [
+        "python"
+      ]
+    },
+    "terraform": {
+      "command": "terraform-ls",
+      "args": [
+        "serve"
+      ],
+      "filetypes": [
+        "terraform",
+        "tf"
+      ],
+      "initializationOptions": {},
+      "settings": {}
     }
-    //"csharp-ls": {
-    //  "command": "/Users/hafiz/.dotnet/tools/csharp-ls",
-    //  "filetypes": [
-    //    "cs"
-    //  ],
-    //  "rootPatterns": [
-    //    "*.csproj",
-    //    ".vim/",
-    //    ".git/",
-    //    ".hg/"
-    //  ]
-    //}
   }
 }

@@ -53,7 +53,8 @@ map <silent> <Leader>D <Plug>(coc-diagnostic-prev)
 map <silent> <Leader>d <Plug>(coc-diagnostic-next)
 
 " Remap keys for gotos
-map <silent> <Leader>f <Plug>(coc-definition)
+nnoremap <silent> <Leader>ff :call CocAction('jumpDefinition', 'vsplit')<CR>
+nnoremap <silent> <Leader>fg <Plug>(coc-definition)
 map <silent> <Leader>y <Plug>(coc-type-definition)
 map <silent> <Leader>i <Plug>(coc-implementation)
 nnoremap <silent> <Leader>rr :call CocActionAsync("jumpReferences", "split")<CR>
@@ -84,13 +85,11 @@ nmap <leader>ac  <Plug>(coc-codeaction)
 " Remap for do codeAction of cursor
 nmap <leader>ax  <Plug>(coc-codeaction-cursor)
 " Fix autofix problem of current line
-nmap <leader>af  <Plug>(coc-fix-current)
+nmap <leader>ado  <Plug>(coc-fix-current)
 
 " Create mappings for function text object, requires document symbols feature of languageserver.
 xmap if <Plug>(coc-funcobj-i)
 xmap af <Plug>(coc-funcobj-a)
-omap if <Plug>(coc-funcobj-i)
-omap af <Plug>(coc-funcobj-a)
 
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')

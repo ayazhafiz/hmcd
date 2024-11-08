@@ -55,7 +55,7 @@ Plug 'ruanyl/vim-gh-line'
 Plug 'navarasu/onedark.nvim'
 
 " Curse?
-" Plug 'github/copilot.vim'
+Plug 'github/copilot.vim'
 Plug 'supermaven-inc/supermaven-nvim'
 
 Plug 'preservim/nerdtree'
@@ -65,6 +65,20 @@ Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-dispatch'
 
 Plug 'samjwill/nvim-unception'
+
+" Avante
+" Deps
+Plug 'stevearc/dressing.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'MunifTanjim/nui.nvim'
+
+" Optional deps
+Plug 'nvim-tree/nvim-web-devicons' "or Plug 'echasnovski/mini.icons'
+Plug 'HakonHarnes/img-clip.nvim'
+Plug 'zbirenbaum/copilot.lua'
+
+Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+" Avante end
 
 call plug#end()
 

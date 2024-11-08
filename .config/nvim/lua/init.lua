@@ -76,3 +76,15 @@ require("ssr").setup {
 require("supermaven-nvim").setup({})
 
 vim.keymap.set({ "n", "x" }, "<leader>sr", function() require("ssr").open() end)
+
+-- deps:
+require('img-clip').setup ({
+  -- use recommended settings from above
+})
+require('copilot').setup ({
+  -- use recommended settings from above
+})
+require('avante_lib').load()
+require('avante').setup ({
+  -- Your config here!
+})
