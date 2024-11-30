@@ -2,10 +2,10 @@
 #                     be found at https://github.com/koekeishiya/skhd/issues/1
 
 # open terminal
-cmd - return : Applications/Alacritty.app/Contents/MacOS/alacritty
+# cmd - return : Applications/Alacritty.app/Contents/MacOS/alacritty
 
 # open Safari
-cmd + shift - return : osascript -e 'tell application "Safari" to make new document'
+# cmd + shift - return : osascript -e 'tell application "Safari" to make new document'
 
 # close focused window
 alt - w : yabai -m window --close
@@ -16,8 +16,8 @@ alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
 alt - l : yabai -m window --focus east
 
-cmd - j : yabai -m window --focus prev
-cmd - k : yabai -m window --focus next
+# cmd - j : yabai -m window --focus prev
+# cmd - k : yabai -m window --focus next
 
 # swap window
 shift + alt - h : yabai -m window --swap west

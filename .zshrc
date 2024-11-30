@@ -108,3 +108,5 @@ autoload -U add-zsh-hook
 add-zsh-hook chpwd _source_local_rc
 _source_local_rc
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+
+eval "$(direnv hook zsh)"
